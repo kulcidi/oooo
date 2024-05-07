@@ -1,0 +1,47 @@
+footer{
+   display: flex;
+   background-color: #232347;
+   height: auto;
+   width: 100%;
+}
+section h3{
+   color: aliceblue;
+      font-family: "biba";
+      font-size: calc(32px + 10 * (100vw / 1280));
+   
+}
+section h4{
+   color: aliceblue;
+   font-family: "boba";
+      font-size: calc(10px + 10 * (100vw / 1280));
+}
+section{
+   margin-top: 40px;
+   margin-left: 5px;
+   margin-block-start: 0em;
+   margin-block-end: 1em;
+   gap: 0px;
+}
+@media screen and (min-width: 600px){
+   footer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #232347;
+      height: auto;
+      width: 100%;
+   }
+   footer section{
+      width: 100%;
+      gap: 5px;
+      display: flex;
+      margin-top: 40px;
+      margin-left: 15px;
+      margin-block-start: 0em;
+      margin-block-end: 1em;
+      gap: 50px;
+   }
+   footer div{
+      width: 100%;
+   }
+}   

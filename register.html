@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Delicion Delight</title>
+   <link rel="stylesheet" href="./header.css">
+   <link rel="stylesheet" href="./footer.css">
+   <link rel="stylesheet" href="./style.css">
+   <script src="./need.js"></script>
+</head>
+<body> <header>
+   <div class="did">
+      <a href="./cataloge.html">КАТАЛОГ</a>
+      <h2>|</h2>
+      <a href="./basket.html"> КОРЗИНА</a>
+   </div>
+   <button id="menus"><img src="./svg/menu.svg"></button>
+   
+   <div class="logo-container">
+      <img id="logo" src="./img/logo.png" alt="logo">
+      
+   </div>
+   <div class="will">
+         <a href="./orders.html">ЗАКАЗЫ</a>
+         <h2>|</h2>
+         <a href="./profile.html">ПРОФИЛЬ</a>
+      </div>
+</header>
+<aside id="menu" class="menu">
+   <h2 class="nuclear">КОРЗИНА</h2>
+   <h2 class="nuclear">ЗАКАЗЫ</h2>
+   <h2 class="nuclear">ПРОФИЛЬ</h2>
+</aside>
+
+<div class="navigateme"><a href="./index.html">ГЛАВНАЯ /</a><a href="./register.html"> РЕГИСТРАЦИЯ</a></div>
+
+<main class="kek">
+<div class="lol">
+   <div class="square">
+      <div class="work1">
+         <h1 id="orange">ЗАРЕГИСТРИРОВАТЬСЯ</h1>
+      </div>
+      <div class="work2">
+         <div>
+            <img src="./svg/google.svg">
+            <h4>РЕГИСТРАЦИЯ ЧЕРЕЗ GOOGLE АККАУНТ</h4>
+         </div>
+         <dir><b>или</b></dir>
+         <input type="text" id="name" name="firstname" placeholder="Имя">
+         <input type="text" id="fname" name="firstname" placeholder="Почта">
+         <input type="text" id="lname" name="lastname" placeholder="Пароль">
+      </div>
+      <div class="work2" id="trololo">
+            <a href="./index.html"><h2>ПОДТВЕРДИТЬ</h2></a>
+   </div>
+   <dir id="what"><b>Уже есть аккаунт?</b><a href="./voiti.html"><b id="k"> Войти</b></a></dir>
+</div>
+</main>
+<footer>
+   <section>
+      <div>
+         <h3>О НАС</h2>
+         <h4>Наш бренд</h3>
+         <h4>Партнерам</h3>
+         <h4>Сотрудничество</h3>
+      </div>
+      <div>
+         <h3>ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</h2>
+         <h4>Политика использования</h3>
+         <h4>Вопросы</h3>
+         <h4>Поддержка</h3>
+      </div>
+      <div>
+         <h3>СОЦСЕТИ</h2>
+         <h4>Узнавайте о новинках</h3>
+         <img src="./svg/sociamedia.png">
+      </div>
+      <div>
+         <h3>(с)2024</h2>
+      </div>
+   </section>
+</footer>
+      <script>
+    // Получаем ссылку на боковое меню
+    const asideMenu = document.getElementById("menu");
+    
+    // Получаем ссылку на кнопку меню
+    const menuButton = document.getElementById("menus");
+
+    // Добавляем обработчик события клика на кнопку меню
+    menuButton.addEventListener("click", (event) => {
+        event.stopPropagation(); // Остановка распространения события, чтобы оно не дошло до документа
+        asideMenu.classList.toggle("menu-active");
+    });
+
+    // Добавляем обработчик события клика на документ
+    document.addEventListener("click", (event) => {
+        // Если клик был выполнен вне бокового меню и кнопки меню, то закрываем меню
+        if (!asideMenu.contains(event.target) && event.target !== menuButton) {
+            asideMenu.classList.remove("menu-active");
+        }
+    });
+</script>
+<script>
+   // Get all catalog blocks
+   const catalogBlocks = document.querySelectorAll('.catalog-block');
+
+   // Add click event listener to each catalog block
+   catalogBlocks.forEach(block => {
+       block.addEventListener('click', () => {
+           window.location.href = './cataloge.html'; // Redirect to catalog.html
+       });
+   });
+</script>
+</body>
+
+</html>

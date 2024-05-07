@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Delicion Delight</title>
+   <link rel="stylesheet" href="./header.css">
+   <link rel="stylesheet" href="./footer.css">
+   <link rel="stylesheet" href="./style.css">
+   <script src="./need.js"></script>
+</head>
+<body> <header>
+   <div class="did">
+      <a href="./cataloge.html">КАТАЛОГ</a>
+      <h2>|</h2>
+      <a href="./basket.html"> КОРЗИНА</a>
+   </div>
+   <button id="menus"><img src="./svg/menu.svg"></button>
+   
+   <div class="logo-container">
+      <img id="logo" src="./img/logo.png" alt="logo">
+      
+   </div>
+   <div class="will">
+         <a href="./orders.html">ЗАКАЗЫ</a>
+         <h2>|</h2>
+         <a href="./register.html">ВОЙТИ</a>
+      </div>
+</header>
+<aside id="menu" class="menu">
+   <h2 class="nuclear">КОРЗИНА</h2>
+   <h2 class="nuclear">ЗАКАЗЫ</h2>
+   <h2 class="nuclear">ПРОФИЛЬ</h2>
+</aside>
+   <main>
+   <div class="mainsussy">
+      <div class="photeos"><img id="c" src="./img/c1.png" alt="">
+         <img id="c" src="./img/c2.png" alt="">
+      </div>
+      <div class="phrase1"> <h1 id="orange"> НАША ПОСУДА - ВАШ КОМФОРТ</h1></div>
+      <div class="photeos1"><img id="c" src="./img/c3.png" alt="">
+         <img id="c" src="./img/c4.png" alt="">
+      </div>
+      <div class="photeos1"><img id="c6" src="./img/c5.png"></div>
+      
+   </div>
+   <img id="c5" src="./img/c5.png">
+   <div class="catalog">
+      <h1>ПОПУЛЯРНЫЕ РАЗДЕЛЫ</h1>
+      <nav class="susu">
+    <div class="catalog-block" id="blockc1">
+        <img src="./img/catalog1.png" alt="">
+        <h4>ПОСУДА ДЛЯ ГОТОВКИ</h4>
+    </div>
+    <div class="catalog-block" id="blockc2">
+        <img src="./img/catalog2.png" alt="">
+        <h4>КУХОННЫЕ ПРИБОРЫ</h4>
+    </div>
+    <div class="catalog-block" id="blockc3">
+        <img src="./img/catalog3.png" alt="">
+        <h4>СЕРВИРОВКА СТОЛА</h4>
+    </div>
+    <div class="catalog-block" id="blockc4">
+        <img src="./img/catalog4.png" alt="">
+        <h4>ДЛЯ ЧАЯ И КОФЕ</h4>
+    </div>
+    <div class="catalog-block" id="blockc5">
+        <img src="./img/catalog5.png" alt="">
+        <h4>КУХОННЫЕ АКСЕССУАРЫ</h4>
+    </div>
+</nav>
+     
+      <a href="./cataloge.html"><h4 id="orange">ПЕРЕЙТИ К КАТАЛОГУ</h4></a>
+   </div>
+   <div class="sus"><img id="c5" src="./img/kitchen.png"></div>
+   <h1 class="dedede">СКИДКА 25% НА ПЕРВЫЙ ЗАКАЗ</h1>
+   <h4 class="ne"> Наша команда желает приятных покупок!</h4>
+</main>
+<footer>
+   <section>
+      <div>
+         <h3>О НАС</h2>
+         <h4>Наш бренд</h3>
+         <h4>Партнерам</h3>
+         <h4>Сотрудничество</h3>
+      </div>
+      <div>
+         <h3>ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</h2>
+         <h4>Политика использования</h3>
+         <h4>Вопросы</h3>
+         <h4>Поддержка</h3>
+      </div>
+      <div>
+         <h3>СОЦСЕТИ</h2>
+         <h4>Узнавайте о новинках</h3>
+         <img src="./svg/sociamedia.png">
+      </div>
+      <div>
+         <h3>(с)2024</h2>
+      </div>
+   </section>
+</footer>
+      <script>
+    // Получаем ссылку на боковое меню
+    const asideMenu = document.getElementById("menu");
+    
+    // Получаем ссылку на кнопку меню
+    const menuButton = document.getElementById("menus");
+
+    // Добавляем обработчик события клика на кнопку меню
+    menuButton.addEventListener("click", (event) => {
+        event.stopPropagation(); // Остановка распространения события, чтобы оно не дошло до документа
+        asideMenu.classList.toggle("menu-active");
+    });
+
+    // Добавляем обработчик события клика на документ
+    document.addEventListener("click", (event) => {
+        // Если клик был выполнен вне бокового меню и кнопки меню, то закрываем меню
+        if (!asideMenu.contains(event.target) && event.target !== menuButton) {
+            asideMenu.classList.remove("menu-active");
+        }
+    });
+</script>
+<script>
+   // Get all catalog blocks
+   const catalogBlocks = document.querySelectorAll('.catalog-block');
+
+   // Add click event listener to each catalog block
+   catalogBlocks.forEach(block => {
+       block.addEventListener('click', () => {
+           window.location.href = './cataloge.html'; // Redirect to catalog.html
+       });
+   });
+</script>
+</body>
+
+</html>

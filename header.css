@@ -1,0 +1,88 @@
+@font-face{
+   font-family: biba;
+   font-weight: 800;
+   src: url("./font/Beryozki.ttf");
+}
+@font-face{
+   font-family: boba;
+   src: url("./font/Comfortaa-Regular.ttf");
+ }
+ 
+ header {
+   z-index: 99;
+   width: 100%;
+   height: 75px;
+   background-color: #232347;
+   display: flex;
+   align-items: center;
+   position: fixed;
+}
+.did{
+   margin-left: 15px;
+}
+.will{
+   margin-right: 15px;
+}
+.logo-container {
+   flex-grow: 1;
+   display: flex;
+   justify-content: center;
+}
+
+#menus {
+   border: none;
+   background: none;
+   display: block;
+}
+
+header div{
+   display: none;
+}
+#logo {
+   max-height: 100%;
+   max-width: 100%;
+}
+
+@media screen and (min-width: 1000px){
+   #menus {
+      display: none;
+   }
+header h2{
+   color: rgb(239, 201, 63);
+   padding-bottom: 20px;
+}
+   header div {
+      gap: 10px ;
+       display: flex;
+       align-items: center;
+       height: 70px;
+   }
+}
+header div a{
+   padding-bottom: 0px;
+   z-index: 99;
+   border: none;
+   background: none;
+   cursor: pointer;
+   text-decoration: none;
+}
+header a:hover{
+   cursor: pointer;
+   text-decoration: solid;
+   text-decoration-line: underline;
+}
+header a h2{
+   margin-block-start: -0.40em;
+        margin-block-end: 0em;
+   font-family: "biba";
+   font-size: calc(48px + 10 * (-60vw / 1280));
+   border: none;
+   background: none;
+   height: 20px;
+   color: aliceblue;
+}
+header a{
+   font-size: calc(48px + 10 * (-60vw / 1280));
+   font-family: "biba";
+   color: aliceblue;
+}

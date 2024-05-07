@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Delicion Delight</title>
+   <link rel="stylesheet" href="./header.css">
+   <link rel="stylesheet" href="./footer.css">
+   <link rel="stylesheet" href="./style.css">
+   <script src="./need.js"></script>
+</head>
+<body> <header>
+   <div class="did">
+      <a href="./cataloge.html">КАТАЛОГ</a>
+      <h2>|</h2>
+      <a href="./basket.html"> КОРЗИНА</a>
+   </div>
+   <button id="menus"><img src="./svg/menu.svg"></button>
+   
+   <div class="logo-container">
+      <img id="logo" src="./img/logo.png" alt="logo">
+      
+   </div>
+   <div class="will">
+         <a href="./orders.html">ЗАКАЗЫ</a>
+         <h2>|</h2>
+         <a href="./profile.html">ПРОФИЛЬ</a>
+      </div>
+</header>
+<aside id="menu" class="menu">
+   <h2 class="nuclear">КОРЗИНА</h2>
+   <h2 class="nuclear">ЗАКАЗЫ</h2>
+   <h2 class="nuclear">ПРОФИЛЬ</h2>
+</aside>
+
+<div class="navigateme"><a href="./index.html">ГЛАВНАЯ /</a><a href="./cataloge.html"> КАТАЛОГ/</a><a href="./price.html"> КРУЖКА</a></div>
+<style>@font-face{
+   font-family: biba;
+   font-weight: 800;
+   src: url("./font/Beryozki.ttf");
+}
+@font-face{
+   font-family: boba;
+   src: url("./font/Comfortaa-Regular.ttf");
+ }
+   .product-container {
+     background-color: #fff;
+     padding: 0 65px 80px;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-container {
+       padding: 0 20px;
+     }
+   }
+ 
+   .product-details {
+     display: flex;
+     gap: 20px;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-details {
+       flex-direction: column;
+       gap: 0;
+     }
+   }
+ 
+   .product-image-container {
+     width: 40%;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-image-container {
+       width: 100%;
+     }
+   }
+ 
+   .product-image {
+     aspect-ratio: 0.92;
+     object-fit: cover;
+     width: 100%;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-image {
+       margin-top: 19px;
+     }
+   }
+ 
+   .product-info-container {
+     width: 60%;
+     margin-left: 20px;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-info-container {
+       width: 100%;
+     }
+   }
+ 
+   .product-info {
+     display: flex;
+     flex-direction: column;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-info {
+       margin-top: 22px;
+     }
+   }
+ 
+   .product-name {
+     color: #232347;
+     font-size: 30pt;
+     letter-spacing: -1.44px;
+      font-family: 'boba';
+   }
+ 
+   .product-rating {
+     aspect-ratio: 7.69;
+     object-fit: contain;
+     width: 212px;
+     margin-top: 6px;
+     max-width: 100%;
+   }
+ 
+   .product-specs {
+     margin-top: 17px;
+   }
+ 
+   @media (max-width: 991px) {
+     .product-specs {
+       padding-right: 20px;
+     }
+   }
+ 
+   .spec-row {
+     display: flex;
+     gap: 20px;
+   }
+ 
+   @media (max-width: 991px) {
+     .spec-row {
+       flex-direction: column;
+       gap: 0;
+     }
+   }
+ 
+   .spec-labels {
+     width: 79%;
+   }
+ 
+   @media (max-width: 991px) {
+     .spec-labels {
+       width: 100%;
+     }
+   }
+ 
+   .spec-label {
+     display: flex;
+     flex-direction: column;
+     font-size: 20px;
+     color: #092a6b;
+     font-weight: 400;
+     line-height: 100%;
+     font-family: Comfortaa, sans-serif;
+   }
+ 
+   @media (max-width: 991px) {
+     .spec-label {
+       margin-top: 40px;
+     }
+   }
+ 
+   .spec-label-origin {
+     margin-top: 0;
+   }
+ 
+   .spec-label-quantity {
+     margin-top: 7px;
+   }
+ 
+   .spec-label-material {
+     margin-top: 10px;
+   }
+ 
+   .spec-label-shape {
+     margin-top: 15px;
+   }
+ 
+   .spec-values {
+     width: 41%;
+     margin-left: 20px;
+   }
+   p {
+    /* height: 70px; */
+    margin-block: 0em;
+    font-family: boba;
+    /* font-size: calc(20px + 0vw); */
+    /* margin-right: 2px; */
+    margin-left: 0px;
+}
+   @media (max-width: 991px) {
+     .spec-values {
+       width: 100%;
+     }
+   }
+ 
+   .spec-value {
+     display: flex;
+     flex-direction: column;
+     font-size: 20px;
+     color: #232347;
+     font-weight: 400;
+     line-height: 100%;
+     font-family: 'boba', sans-serif;
+   }
+ 
+   @media (max-width: 991px) {
+     .spec-value {
+       margin-top: 40px;
+     }
+   }
+ 
+   .spec-value-origin {
+     margin-top: 0;
+   }
+   .spec-value-quantity {
+     margin-top: 10px;
+   }
+ 
+   .spec-value-material {
+     margin-top: 17px;
+   }
+ 
+   .spec-value-shape {
+     margin-top: 20px;
+   }
+ 
+   .product-description {
+     color: #092a6b;
+     margin-top: 29px;
+     font: 400 24px 'boba';
+   }
+ .product-container{
+   scale: 0.95;
+   margin-top: -30px;
+ }
+   @media (max-width: 991px) {
+     .product-description {
+       max-width: 100%;
+     }
+   }
+ </style>
+
+ <div class="product-container">
+   <div class="product-details">
+     <div class="product-image-container">
+       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fdcf2e49cf09ff630f33df8d07c352c97cb61ed34a55d8c0be6e3a68bf67ed3?apiKey=b001e070020344dca7bf7d158e262b13&" alt="Boltze Degeto mug" class="product-image" />
+     </div>
+     <div class="product-info-container">
+       <div class="product-info">
+         <h1 class="product-name">Кружка Boltze Degeto 220 мл</h1>
+         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dd47f5d2980b4e16f38cdd65b2d016ef6ca70fc89420dd633c5458801cec7890?apiKey=b001e070020344dca7bf7d158e262b13&" alt="Product rating" class="product-rating" />
+         <div class="product-specs">
+           <div class="spec-row">
+             <div class="spec-labels">
+               <div class="spec-label spec-label-origin">Страна производства:</div>
+               <div class="spec-label spec-label-quantity">Кол-во в упаковке:</div>
+               <div class="spec-label spec-label-material">Материал посуды:</div>
+               <div class="spec-label spec-label-shape">Форма посуды:</div>
+             </div>
+             <div class="spec-values">
+               <div class="spec-value spec-value-origin">Германия</div>
+               <div class="spec-value spec-value-quantity">1 шт.</div>
+               <div class="spec-value spec-value-material">керамика</div>
+               <div class="spec-value spec-value-shape">круглая;</div>
+             </div>
+           </div>
+         </div>
+         <p class="product-description">
+           Кружки Boltze Degeto сочетают в себе неподвластный времени дизайн и превосходное мастерство изготовления, что делает их желанным дополнением к любому дому. Каждая кружка, изготовленная с точностью и тщательностью, отражает идеальный баланс функциональности и эстетической привлекательности.
+         </p>
+       </div>
+     </div>
+   </div><div class="buttonie">
+      <h1 id="oi">ЦЕНА : 340 Р</h1>
+      <h1 id="oioi"><a href="./basket.html">В КОРЗИНУ</a></h1>
+   </div>
+ </div>
+ 
+ <style>
+   .buttonie{
+      display: flex;
+      justify-content: center;
+      gap: 30%;
+   }
+   #oioi{
+      padding-top: 20px;
+      margin-block-start: -0.6em;
+    margin-block-end: 0em;
+      background-color: #ffc250;
+      color: #092a6b;
+      height: 70px;
+      text-align: center;
+
+      width: 30%;
+   }
+   #oioi:hover{
+      cursor: pointer;
+   }
+   #oi{
+      padding-top: 20px;
+      margin-block-start: -0.6em;
+    margin-block-end: 0em;
+      color: #092a6b;
+      height: 70px;
+      text-align: center;
+      border: 2px solid #2d2d5a;
+
+      width: 30%;
+   }
+   .rating-section {
+     display: flex;
+     flex-direction: column;
+     padding: 0 20px;
+     scale: 0.85;
+     margin-top: -70px;
+   }
+ 
+   .rating-title {
+    margin-block-start: 0.2em;
+    margin-block-end: -0.1em;
+    color: #e3601d;
+    width: 100%;
+    font: 400 64px Beryozki, sans-serif;
+    font-family: 'biba';
+    margin-left: 10px;
+}
+ 
+   @media (max-width: 991px) {
+     .rating-title {
+       max-width: 100%;
+       font-size: 40px;
+     }
+   }
+ 
+   .rating-image {
+     aspect-ratio: 6.67;
+     object-fit: auto;
+     object-position: center;
+     width: 228px;
+     margin-top: 15px;
+     max-width: 100%;
+   }
+ 
+   .rating-columns {
+     margin-top: 16px;
+     width: 433px;
+     max-width: 100%;
+   }
+ 
+   .rating-row {
+     gap: 20px;
+     display: flex;
+   }
+ 
+   @media (max-width: 991px) {
+     .rating-row {
+       flex-direction: column;
+       align-items: stretch;
+       gap: 0;
+     }
+   }
+ 
+   .rating-column {
+     display: flex;
+     flex-direction: column;
+     line-height: normal;
+     width: 25%;
+     margin-left: 0;
+   }
+ 
+   @media (max-width: 991px) {
+     .rating-column {
+       width: 100%;
+     }
+   }
+ 
+   .rating-bar {
+     background-color: #9e9e9e;
+     width: 97px;
+     height: 140px;
+     margin: 0 auto;
+   }
+ 
+   @media (max-width: 991px) {
+     .rating-bar {
+       margin-top: 16px;
+     }
+   }
+ 
+   .comment-section {
+     display: flex;
+     margin-top: 19px;
+     width: 100%;
+     gap: 4px;
+   }
+ 
+   @media (max-width: 991px) {
+     .comment-section {
+       max-width: 100%;
+       flex-wrap: wrap;
+     }
+   }
+ 
+      .comment-card {
+    background-color: #fff;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    height: 175px;
+    justify-content: space-between;
+    padding: 5px 17px 7px 14px;
+}
+ 
+   @media (max-width: 991px) {
+     .comment-card {
+       max-width: 100%;
+       flex-wrap: wrap;
+     }
+   }
+ 
+   .comment-content {
+     display: flex;
+     flex-direction: column;
+     font-size: 24px;
+     color: #000;
+     font-weight: 400;
+   }
+ 
+   .comment-author {
+      font-family: 'boba';
+    color: rgb(11, 13, 30);
+    font-size: calc(19px + 10 * (100vw / 1280));
+    margin-block-start: 0.3em;
+    margin-block-end: 0.00em;
+   }
+ 
+   .comment-text {
+     font-family: Comfortaa, sans-serif;
+     margin-top: 12px;
+   }
+ 
+   .comment-rating {
+     display: flex;
+     margin-top: 7px;
+     gap: 8px;
+   }
+ 
+   .rating-star {
+     aspect-ratio: 1.06;
+     object-fit: auto;
+     object-position: center;
+     width: 32px;
+     fill: #e3601d;
+   }
+ 
+   .rating-star-alt {
+     aspect-ratio: 1.03;
+     object-fit: auto;
+     object-position: center; 
+     width: 31px;
+     fill: #e3601d;
+   }
+ 
+   .comment-image {
+      background-color: #9e9e9e;
+    width: 101px;
+    height: 183px;
+   }
+ 
+   .comment-card-alt {
+     background-color: #fff;
+     display: flex;
+     margin-top: 29px;
+     width: 100%;
+     flex-direction: column;
+     padding: 22px 20px 80px 9px;
+   }
+ 
+   @media (max-width: 991px) {
+     .comment-card-alt {
+       max-width: 100%;
+     }
+   }
+ 
+   .comment-header {
+     display: flex;
+     width: 100%;
+     gap: 20px;
+   }
+ 
+   @media (max-width: 991px) {
+     .comment-header {
+       max-width: 100%;
+       flex-wrap: wrap;
+       padding-right: 20px;
+     }
+   }
+ 
+   .comment-author-alt {
+     color: #000;
+     flex-grow: 1;
+     flex-basis: auto;
+     font: 400 24px Comfortaa, sans-serif;
+   }
+ 
+   .comment-text-alt {
+     color: #000;
+     margin: 8px 0 20px;
+     font: 400 24px Comfortaa, sans-serif;
+   }
+ 
+   @media (max-width: 991px) {
+     .comment-text-alt {
+       max-width: 100%;
+     }
+   }
+ </style>
+ 
+ <section class="rating-section">
+   <h2 class="rating-title">РЕЙТИНГ</h2>
+   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/da6a6fbba258b7a699534958faad70d1065b5f7962838753d0d5863a37297242?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-image" />
+   
+   <div class="rating-columns">
+     <div class="rating-row">
+       <div class="rating-column">
+         <div class="rating-bar"></div>
+       </div>
+       <div class="rating-column">
+         <div class="rating-bar"></div>
+       </div>
+       <div class="rating-column">
+         <div class="rating-bar"></div>
+       </div>
+       <div class="rating-column">
+         <div class="rating-bar"></div>
+       </div>
+     </div>
+   </div>
+ 
+   <div class="comment-section">
+     <article class="comment-card">
+       <div class="comment-content">
+         <h3 class="comment-author">Ваня Тирских</h3>
+         <p class="comment-text">ТЭто моя любимая кружка!! Жаль фото не прогрузились</p>
+       </div>
+       <div class="comment-rating">
+         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a23e4a3454d9855325deb39edcea09f7aaf06c2d1eff3ee83b30521dd796dc45?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star" />
+         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7ba33749d501a5c1b5e9cfbf594243e082f3c84cb2c683ba89705fd28aa7c1d?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star-alt" />
+         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a23e4a3454d9855325deb39edcea09f7aaf06c2d1eff3ee83b30521dd796dc45?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star" />
+         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7ba33749d501a5c1b5e9cfbf594243e082f3c84cb2c683ba89705fd28aa7c1d?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star-alt" />
+         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a23e4a3454d9855325deb39edcea09f7aaf06c2d1eff3ee83b30521dd796dc45?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star" />
+       </div>
+     </article>
+     <div class="comment-image"></div>
+     <div class="comment-image"></div>
+   </div>
+   <div class="comment-section">
+      <article class="comment-card">
+        <div class="comment-content">
+          <h3 class="comment-author">Юля Филькина</h3>
+          <p class="comment-text">Пью из кружки уже 3 года, довольна.....Урвала по скидке</p>
+        </div>
+        <div class="comment-rating">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a23e4a3454d9855325deb39edcea09f7aaf06c2d1eff3ee83b30521dd796dc45?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7ba33749d501a5c1b5e9cfbf594243e082f3c84cb2c683ba89705fd28aa7c1d?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star-alt" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a23e4a3454d9855325deb39edcea09f7aaf06c2d1eff3ee83b30521dd796dc45?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7ba33749d501a5c1b5e9cfbf594243e082f3c84cb2c683ba89705fd28aa7c1d?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star-alt" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a23e4a3454d9855325deb39edcea09f7aaf06c2d1eff3ee83b30521dd796dc45?apiKey=b001e070020344dca7bf7d158e262b13&" alt="" class="rating-star" />
+        </div>
+      </article>
+    </div>
+   
+ </section>
+<footer>
+   <section>
+      <div>
+         <h3>О НАС</h2>
+         <h4>Наш бренд</h3>
+         <h4>Партнерам</h3>
+         <h4>Сотрудничество</h3>
+      </div>
+      <div>
+         <h3>ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</h2>
+         <h4>Политика использования</h3>
+         <h4>Вопросы</h3>
+         <h4>Поддержка</h3>
+      </div>
+      <div>
+         <h3>СОЦСЕТИ</h2>
+         <h4>Узнавайте о новинках</h3>
+         <img src="./svg/sociamedia.png">
+      </div>
+      <div>
+         <h3>(с)2024</h2>
+      </div>
+   </section>
+</footer>
+      <script>
+    // Получаем ссылку на боковое меню
+    const asideMenu = document.getElementById("menu");
+    
+    // Получаем ссылку на кнопку меню
+    const menuButton = document.getElementById("menus");
+
+    // Добавляем обработчик события клика на кнопку меню
+    menuButton.addEventListener("click", (event) => {
+        event.stopPropagation(); // Остановка распространения события, чтобы оно не дошло до документа
+        asideMenu.classList.toggle("menu-active");
+    });
+
+    // Добавляем обработчик события клика на документ
+    document.addEventListener("click", (event) => {
+        // Если клик был выполнен вне бокового меню и кнопки меню, то закрываем меню
+        if (!asideMenu.contains(event.target) && event.target !== menuButton) {
+            asideMenu.classList.remove("menu-active");
+        }
+    });
+</script>
+<script>
+   // Get all catalog blocks
+   const catalogBlocks = document.querySelectorAll('.catalog-block');
+
+   // Add click event listener to each catalog block
+   catalogBlocks.forEach(block => {
+       block.addEventListener('click', () => {
+           window.location.href = './cataloge.html'; // Redirect to catalog.html
+       });
+   });
+</script>
+</body>
+
+</html>
